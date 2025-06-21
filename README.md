@@ -1,14 +1,16 @@
-# CloudLess Project
+# CloudLess - Projet Cloud Auto-Hébergé
 
-CloudLess est une solution cloud auto-hébergée pour les établissements scolaires avec Nextcloud, OnlyOffice, MariaDB, Nginx, stockage, LDAP, et supervision.
+CloudLess est une solution de cloud souverain pour établissements scolaires basée sur :
+- Nextcloud
+- OnlyOffice
+- MariaDB
+- Nginx (reverse proxy)
+- LDAP (authentification)
+- Supervision (Zabbix, Grafana)
+- Kubernetes ou Docker Swarm
 
-## Objectifs
-- Respect du RGPD
-- Réduction des coûts
-- Souveraineté numérique
+## Déploiement
 
-## Technologies
-- Docker / Ansible
-- Kubernetes ou Swarm
-- Nextcloud / OnlyOffice / LDAP
-
+```bash
+ansible-playbook -i inventory.ini site.yml
+```

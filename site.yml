@@ -1,0 +1,23 @@
+---
+- name: Déploiement CloudLess
+  hosts: all
+  become: yes
+
+  roles:
+    - role: mariadb
+      when: inventory_hostname in groups['mariadb']
+
+    - role: nginx
+      when: inventory_hostname in groups['nginx']
+
+    - role: nextcloud
+      when: inventory_hostname in groups['nextcloud']
+
+    - role: onlyoffice
+      when: inventory_hostname in groups['onlyoffice']
+
+    - role: ldap
+      when: inventory_hostname in groups['ldap']
+
+    - role: monitoring
+      when: inventory_hostname in groups['monitoring']
