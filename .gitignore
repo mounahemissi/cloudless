@@ -1,0 +1,45 @@
+# Docker
+**/Dockerfile*
+**/docker-compose*.yml
+
+# Ignore Docker image and container files (local build artifacts)
+*.log
+*.pid
+*.sock
+
+# Docker volumes, build cache
+docker-compose.override.yml
+docker-compose.override.yml.bak
+docker-compose.override.yml.old
+
+# Docker system files
+**/.docker
+
+# Ansible
+# Ignore fact cache
+fact_cache/
+
+# Ignore ansible retry files
+*.retry
+
+# Ignore vault password files
+vault_password.txt
+vault_password.yml
+
+# Ignore logs, temporary files and backups
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Ignore inventory files if you don't want to version them
+# inventory/
+# inventory.ini
+
+# Ignore Python cache if you have python scripts
+__pycache__/
+*.pyc
+
+# Ignore secrets or sensitive files
+secrets.yml
